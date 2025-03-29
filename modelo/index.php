@@ -1,5 +1,6 @@
+<?php include "modelo/conexao.php";?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,20 +46,29 @@
       <th scope="col">Email</th>
       <th scope="col">Endereço</th>
       <th scope="col">Data de Nascimento</th>
-      <th scope="col"></th>
+      <th scope="col">Funçôes</th>
     </tr>
   </thead>
   <tbody>
+    <?php 
+    while ($linha = mysqli_fetch_assoc($dados)) {
+     $id_pessoa = $linha['id_pessoa'];
+     $nome = $linha['nome'];
+     $email = $linha['email'];
+     $endereco = $linha['endereco'];
+     $data_nascimento = $linha['data_nascimento']; 
+    }
+    ?>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>$nome</td>
+      <td>$email</td>
+      <td>$endereco</td>
+      <td>$data_nascimento</td>
 <td>
-        <a href="edit_script.php" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
         <a href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
       </td>
-    </tr>
+    </tr>;
    
   </tbody>
 </table>
