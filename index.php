@@ -1,5 +1,5 @@
 <?php
-include('./conexao.php');
+include "conexao.php";
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -10,7 +10,6 @@ include('./conexao.php');
 
     <title>PROJETO CRUD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/59352edfa0.js" crossorigin="anonymous"></script>
     
 </head>
 
@@ -97,9 +96,8 @@ include('./conexao.php');
           <td>$email</td>
           <td>$data_nascimento</td>
           <td width=150px>
-              <a href='controller/cadastro_edit.php?id=$cod_pessoa' class='btn btn-success btn-sm'>Editar</a>
-              <a href='#' type='button' class='btn btn-danger btn-sm'  data-bs-toggle='modal' data-bs-target='#confirma'
-              onclick=" . '"' . "pegar_dados($cod_pessoa, '$nome')" . '"' . ">Excluir</a> 
+              <a href='cadastro_edit.php?id=$cod_pessoa' class='btn btn-success btn-sm'>Editar</a>
+              <a href='excluir_script.php?id=$cod_pessoa' class='btn btn-danger btn-sm'>Excluir</a> 
               </td>
 
         </tr>";

@@ -16,6 +16,7 @@
     <div class="row">
       <?php
       include "conexao.php";
+      
       $id = $_GET['id'];
       $nome = $_GET['nome'];
 
